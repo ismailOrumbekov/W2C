@@ -320,7 +320,7 @@ private extension inDetailSignUpViewController {
         nextButton.snp.makeConstraints { make in
             make.top.equalTo(genderRadioButtons.snp.bottom).offset(60)
             make.centerX.equalToSuperview()
-            make.width.equalToSuperview().multipliedBy(0.65)
+            make.width.equalToSuperview().multipliedBy(0.85)
             make.height.equalToSuperview().multipliedBy(0.05)
         }
     }

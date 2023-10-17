@@ -9,54 +9,17 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController {
+    
+    let text =  "saljfladnf"
+    let customUI = CustomUI()
+//MARK: UI variables
+    private lazy var cloudsImageView = customUI.getIcon(name: "clouds")
+    private lazy var logoIconView = customUI.getIcon(name: "logo")
+    private lazy var cityBottomImageView = customUI.getIcon(name: "bottomCity")
+    private lazy var signInButton : UIButton = customUI.createDefaultButton(text: "Войти")
+    private lazy var signUpButton : UIButton = customUI.createDefaultButton(text: "Зарегистрироваться")
+    private lazy var welcomeLabel : UILabel = customUI.createMainLabel(text: "Welcome to the city", font: 30)
 
-    let cloudsImageView : UIImageView = {
-       let imageView = UIImageView(image: UIImage(named: "clouds"))
-        return imageView
-    }()
-    let logoIconView : UIImageView = {
-       let imageView = UIImageView(image: UIImage(named: "logo"))
-        return imageView
-    }()
-    
-    let cityBottomImageView : UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "bottomCity"))
-        return imageView
-    }()
-    
-    let signInButton : UIButton = {
-        let button = UIButton()
-        button.setTitle("Войти", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 22, weight: UIFont.Weight(0.6))
-        button.titleLabel?.textAlignment = .center
-
-        button.backgroundColor = UIColor(named: "mainRed")
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 7
-        return button
-    }()
-    
-    let signUpButton : UIButton = {
-        let button = UIButton()
-        button.setTitle("Зарегистрироваться", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 22, weight: UIFont.Weight(0.6))
-        button.titleLabel?.textAlignment = .center
-        button.backgroundColor = UIColor(named: "mainRed")
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 7
-        return button
-    }()
-    
-    let welcomeLabel : UILabel = {
-        let label = UILabel()
-        label.text = "Welcome to the city"
-        label.textColor = UIColor(named: "mainRed")
-        label.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight(0.9))
-        label.textAlignment = .center
-        
-        return label
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -123,15 +86,15 @@ extension ViewController{
         signInButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(welcomeLabel.snp.bottom).offset(80)
-            make.width.equalToSuperview().offset(-100)
-            make.height.equalToSuperview().multipliedBy(0.05) // was 50px (??)
+            make.width.equalToSuperview().multipliedBy(0.85)
+            make.height.equalToSuperview().multipliedBy(0.05) 
             
         }
         
         signUpButton.snp.makeConstraints { make in
             make.top.equalTo(signInButton.snp.bottom).offset(40)
             make.centerX.equalToSuperview()
-            make.width.equalToSuperview().offset(-100)
+            make.width.equalToSuperview().multipliedBy(0.85)
             make.height.equalToSuperview().multipliedBy(0.05)
 
         }

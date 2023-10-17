@@ -11,11 +11,12 @@ import SnapKit
 
 class SignInViewController: UIViewController{
     
-    let cloudsImageView : UIImageView = {
-       let imageView = UIImageView(image: UIImage(named: "clouds"))
-        return imageView
-    }()
+    let customUI = CustomUI()
+    private lazy var cloudsImageView = customUI.getIcon(name: "clouds")
+    private lazy var citiBottomImageView : UIImageView = customUI.getIcon(name: "bottomCity")
     
+    private lazy var signInImageView : UIImageView = customUI.getIcon(name: "signInIcon")
+
     let studentLabel : UILabel = {
        let label = UILabel()
         label.font = UIFont(name: "Arial", size: 22)
@@ -25,75 +26,30 @@ class SignInViewController: UIViewController{
         return label
     }()
     
-    let signInButton : UIButton = {
-        let button = UIButton()
-        button.setTitle("Войти", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 22, weight: UIFont.Weight(0.6))
-        button.titleLabel?.textAlignment = .center
+    private lazy var signInButton : UIButton = customUI.createDefaultButton(text: "Войти")
 
-        button.backgroundColor = UIColor(named: "mainRed")
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 7
-        return button
-    }()
+    private lazy var phoneField : UITextField = customUI.createTextField(placeholder: "Введите почту")
+
+    private lazy var phoneNumberLabel : UILabel = customUI.createTitleForField(text: "ПОЧТА")
+
+    private lazy var passwordLabel : UILabel = customUI.createTitleForField(text: "Пароль")
+
     
-    let phoneField : UITextField = {
-       let textField = UITextField()
-        textField.text = "+7"
-        textField.layer.borderWidth = 1.0
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.cornerRadius = 2
-        return textField
-    }()
+    private lazy var passwordField : UITextField = customUI.createTextField(placeholder: "Пароль")
+
     
-    let phoneNumberLabel : UILabel = {
-       let label = UILabel()
-        label.text = "Номер телефона"
-        label.font = UIFont(name: "Arial", size: 18)
-        label.textColor = .black
-        return label
-    }()
     
-    let passwordLabel : UILabel = {
-        let label = UILabel()
-        label.text = "Пароль"
-        label.font = UIFont(name: "Arial", size: 18)
-        label.textColor = .black
-        return label
-    }()
     
-    let passwordField : UITextField = {
-       let textField = UITextField()
-        textField.layer.borderWidth = 1.0
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.cornerRadius = 2
-        return textField
-    }()
-    
-    let citiBottomImageView : UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "bottomCity"))
-        return imageView
-    }()
-    
-    let signInImageView : UIImageView = {
-      let imageView = UIImageView(image: UIImage(named: "signInIcon"))
-        return imageView
-    }()
-    
-    let authorizationLabel : UILabel = {
-       let label = UILabel()
-        label.text = "Авторизоваться"
-        label.textColor = UIColor(named: "mainRed")
-        label.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(0.6))
-        return label
-    }()
+    private lazy var authorizationLabel : UILabel = customUI.createMainLabel(text: "Авторизоваться",
+                                                                             font: 20)
+
     
     override func viewDidLoad() {
         setUpUI()
     }
     
     @objc func signInPressed(){
-        let apartmentPage = ApartmentsViewController()
+        let apartmentPage = ProfilePageViewController()
         self.navigationController?.pushViewController(apartmentPage, animated: true)
     }
 }
@@ -107,6 +63,7 @@ extension SignInViewController{
     }
     
     func addSubViews(){
+        
         view.addSubview(cloudsImageView)
         view.addSubview(citiBottomImageView)
         view.addSubview(signInImageView)
@@ -118,6 +75,8 @@ extension SignInViewController{
         view.addSubview(passwordField)
         view.addSubview(signInButton)
         signInButton.addTarget(self, action: #selector(signInPressed), for: .touchUpInside)
+        passwordField.isSecureTextEntry = true
+        
     }
     
     func setUpContrsaints(){
@@ -179,8 +138,8 @@ extension SignInViewController{
         signInButton.snp.makeConstraints { make in
             make.top.equalTo(passwordField.snp.bottom).offset(50)
             make.centerX.equalToSuperview()
-            make.width.equalToSuperview().offset(-100)
-            make.height.equalTo(50)
+            make.width.equalToSuperview().multipliedBy(0.85)
+            make.height.equalToSuperview().multipliedBy(0.05)
         }
     }
 }
