@@ -111,8 +111,8 @@ extension ViewController{
         logoIconView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(-80)
-            make.width.equalTo(300)
-            make.height.equalTo(200)
+            make.width.equalToSuperview().multipliedBy(0.7) // was 300px (??)
+            make.height.equalToSuperview().multipliedBy(0.2) // was 200px (??)
         }
         
         welcomeLabel.snp.makeConstraints { make in
@@ -124,7 +124,7 @@ extension ViewController{
             make.centerX.equalToSuperview()
             make.top.equalTo(welcomeLabel.snp.bottom).offset(80)
             make.width.equalToSuperview().offset(-100)
-            make.height.equalTo(50)
+            make.height.equalToSuperview().multipliedBy(0.05) // was 50px (??)
             
         }
         
@@ -132,7 +132,7 @@ extension ViewController{
             make.top.equalTo(signInButton.snp.bottom).offset(40)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().offset(-100)
-            make.height.equalTo(50)
+            make.height.equalToSuperview().multipliedBy(0.05)
 
         }
     }

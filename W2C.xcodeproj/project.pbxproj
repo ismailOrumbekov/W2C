@@ -19,6 +19,8 @@
 		A7AD40762AD5D7A400953553 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD40752AD5D7A400953553 /* SignInViewController.swift */; };
 		A7AD40782AD6848B00953553 /* ApartmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD40772AD6848B00953553 /* ApartmentsViewController.swift */; };
 		A7AD407A2AD6855E00953553 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD40792AD6855E00953553 /* SignUpViewController.swift */; };
+		BF24F7B02ADD112A00867986 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF24F7AF2ADD112A00867986 /* SnapKit */; };
+		BF24F7B22ADD453300867986 /* inDetailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24F7B12ADD453300867986 /* inDetailSignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		A7AD40752AD5D7A400953553 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A7AD40772AD6848B00953553 /* ApartmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentsViewController.swift; sourceTree = "<group>"; };
 		A7AD40792AD6855E00953553 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BF24F7B12ADD453300867986 /* inDetailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inDetailSignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7AD40742AD402F500953553 /* SnapKit in Frameworks */,
+				BF24F7B02ADD112A00867986 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,7 @@
 				A7AD40752AD5D7A400953553 /* SignInViewController.swift */,
 				A7AD40772AD6848B00953553 /* ApartmentsViewController.swift */,
 				A7AD40792AD6855E00953553 /* SignUpViewController.swift */,
+				BF24F7B12ADD453300867986 /* inDetailSignUpViewController.swift */,
 			);
 			path = W2C;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			name = W2C;
 			packageProductDependencies = (
 				A7AD40732AD402F500953553 /* SnapKit */,
+				BF24F7AF2ADD112A00867986 /* SnapKit */,
 			);
 			productName = W2C;
 			productReference = A74F52DB2AC8049F001C9745 /* W2C.app */;
@@ -228,6 +234,7 @@
 			mainGroup = A74F52D22AC8049F001C9745;
 			packageReferences = (
 				A7AD40722AD402F500953553 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BF24F7AE2ADD112A00867986 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = A74F52DC2AC8049F001C9745 /* Products */;
 			projectDirPath = "";
@@ -274,6 +281,7 @@
 				A7AD407A2AD6855E00953553 /* SignUpViewController.swift in Sources */,
 				A7AD40762AD5D7A400953553 /* SignInViewController.swift in Sources */,
 				A74F52E32AC8049F001C9745 /* ViewController.swift in Sources */,
+				BF24F7B22ADD453300867986 /* inDetailSignUpViewController.swift in Sources */,
 				A74F52DF2AC8049F001C9745 /* AppDelegate.swift in Sources */,
 				A74F52E12AC8049F001C9745 /* SceneDelegate.swift in Sources */,
 				A7AD40782AD6848B00953553 /* ApartmentsViewController.swift in Sources */,
@@ -612,10 +620,23 @@
 				kind = branch;
 			};
 		};
+		BF24F7AE2ADD112A00867986 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		A7AD40732AD402F500953553 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A7AD40722AD402F500953553 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		BF24F7AF2ADD112A00867986 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A7AD40722AD402F500953553 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
