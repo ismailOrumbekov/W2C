@@ -55,15 +55,14 @@ extension ProfilePageViewController{
         view.addSubview(fullnameLabel)
         view.addSubview(ageLabel)
         view.addSubview(stackView)
-        segmentedControl.backgroundColor = .clear
         view.addSubview(segmentedControl)
-        
+        segmentedControl.backgroundColor = .clear
     }
     
     func setUpContraints(){
         profileImageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            make.top.equalTo(view.safeAreaLayoutGuide)
             make.width.equalTo(150)
             make.height.equalTo(150)
         }
@@ -83,7 +82,8 @@ extension ProfilePageViewController{
         }
         
         segmentedControl.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.top.equalTo(stackView).offset(70)
             make.width.equalToSuperview().multipliedBy(0.9)
             make.height.equalTo(50)
         }
@@ -93,7 +93,7 @@ extension ProfilePageViewController{
 
 extension ProfilePageViewController: CustomSegmentedControlDelegate{
     func changeToIndex(index: Int) {
-
+        print(index)
     }
     
     

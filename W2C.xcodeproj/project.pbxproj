@@ -17,6 +17,7 @@
 		A74F53022AC804A3001C9745 /* W2CUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F53012AC804A3001C9745 /* W2CUITestsLaunchTests.swift */; };
 		A770D8722ADE8B0A0005BCC9 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770D8712ADE8B0A0005BCC9 /* ProfilePageViewController.swift */; };
 		A770D8742ADEA46B0005BCC9 /* CustomUISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770D8732ADEA46B0005BCC9 /* CustomUISegmentedControl.swift */; };
+		A770D8762ADFB5B00005BCC9 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770D8752ADFB5AF0005BCC9 /* TabBar.swift */; };
 		A7987B5E2ADE66BF00434850 /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7987B5D2ADE66BF00434850 /* CustomUI.swift */; };
 		A7AD40742AD402F500953553 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A7AD40732AD402F500953553 /* SnapKit */; };
 		A7AD40762AD5D7A400953553 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD40752AD5D7A400953553 /* SignInViewController.swift */; };
@@ -58,6 +59,7 @@
 		A74F53012AC804A3001C9745 /* W2CUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W2CUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A770D8712ADE8B0A0005BCC9 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		A770D8732ADEA46B0005BCC9 /* CustomUISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUISegmentedControl.swift; sourceTree = "<group>"; };
+		A770D8752ADFB5AF0005BCC9 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		A7987B5D2ADE66BF00434850 /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
 		A7AD40752AD5D7A400953553 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A7AD40772AD6848B00953553 /* ApartmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentsViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				A7987B5D2ADE66BF00434850 /* CustomUI.swift */,
 				A770D8712ADE8B0A0005BCC9 /* ProfilePageViewController.swift */,
 				A770D8732ADEA46B0005BCC9 /* CustomUISegmentedControl.swift */,
+				A770D8752ADFB5AF0005BCC9 /* TabBar.swift */,
 			);
 			path = W2C;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				A770D8742ADEA46B0005BCC9 /* CustomUISegmentedControl.swift in Sources */,
 				BF24F7B22ADD453300867986 /* inDetailSignUpViewController.swift in Sources */,
 				A74F52DF2AC8049F001C9745 /* AppDelegate.swift in Sources */,
+				A770D8762ADFB5B00005BCC9 /* TabBar.swift in Sources */,
 				A74F52E12AC8049F001C9745 /* SceneDelegate.swift in Sources */,
 				A7AD40782AD6848B00953553 /* ApartmentsViewController.swift in Sources */,
 			);

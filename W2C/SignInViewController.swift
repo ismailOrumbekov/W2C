@@ -17,6 +17,7 @@ class SignInViewController: UIViewController{
     
     private lazy var signInImageView : UIImageView = customUI.getIcon(name: "signInIcon")
 
+    private lazy var segmentedControl = CustomUISegmentedControl(frame: .infinite, buttonTitle: ["Студент","Арендадатель"])
     let studentLabel : UILabel = {
        let label = UILabel()
         label.font = UIFont(name: "Arial", size: 22)
@@ -49,6 +50,7 @@ class SignInViewController: UIViewController{
     }
     
     @objc func signInPressed(){
+        
         let apartmentPage = ProfilePageViewController()
         self.navigationController?.pushViewController(apartmentPage, animated: true)
     }
@@ -68,12 +70,14 @@ extension SignInViewController{
         view.addSubview(citiBottomImageView)
         view.addSubview(signInImageView)
         view.addSubview(authorizationLabel)
-        view.addSubview(studentLabel)
         view.addSubview(phoneField)
         view.addSubview(phoneNumberLabel)
         view.addSubview(passwordLabel)
         view.addSubview(passwordField)
         view.addSubview(signInButton)
+        view.addSubview(segmentedControl)
+        segmentedControl.backgroundColor = .clear
+        segmentedControl.delegate = self
         signInButton.addTarget(self, action: #selector(signInPressed), for: .touchUpInside)
         passwordField.isSecureTextEntry = true
         
@@ -103,14 +107,16 @@ extension SignInViewController{
             make.centerY.equalToSuperview().offset(-100)
         }
         
-        studentLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(20)
+        segmentedControl.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(10)
             make.top.equalTo(authorizationLabel.snp.bottom).offset(20)
+            make.width.equalToSuperview().multipliedBy(0.5)
+            make.height.equalToSuperview().multipliedBy(0.06)
         }
         
         phoneNumberLabel.snp.makeConstraints { make in
-            make.left.equalTo(studentLabel.snp.left)
-            make.top.equalTo(studentLabel.snp.bottom).offset(15)
+            make.left.equalTo(segmentedControl.snp.left)
+            make.top.equalTo(segmentedControl.snp.bottom).offset(15)
 
         }
         
@@ -142,4 +148,13 @@ extension SignInViewController{
             make.height.equalToSuperview().multipliedBy(0.05)
         }
     }
+}
+
+
+extension SignInViewController: CustomSegmentedControlDelegate{
+    func changeToIndex(index: Int) {
+        print("hello")
+    }
+    
+    
 }
