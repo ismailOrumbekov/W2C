@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71CC5392AE8F94E00725DF5 /* CustomUITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC5382AE8F94E00725DF5 /* CustomUITabBar.swift */; };
+		A71CC53B2AE8F97600725DF5 /* RoommatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC53A2AE8F97600725DF5 /* RoommatesViewController.swift */; };
+		A71CC53D2AE8F99400725DF5 /* DialogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC53C2AE8F99400725DF5 /* DialogsViewController.swift */; };
+		A71CC53F2AE8F9BE00725DF5 /* EventsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC53E2AE8F9BE00725DF5 /* EventsPageViewController.swift */; };
+		A71CC5412AE8FB9700725DF5 /* CollectionViewProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC5402AE8FB9700725DF5 /* CollectionViewProfilePage.swift */; };
 		A74F52DF2AC8049F001C9745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F52DE2AC8049F001C9745 /* AppDelegate.swift */; };
 		A74F52E12AC8049F001C9745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F52E02AC8049F001C9745 /* SceneDelegate.swift */; };
 		A74F52E32AC8049F001C9745 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F52E22AC8049F001C9745 /* ViewController.swift */; };
@@ -17,7 +22,6 @@
 		A74F53022AC804A3001C9745 /* W2CUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F53012AC804A3001C9745 /* W2CUITestsLaunchTests.swift */; };
 		A770D8722ADE8B0A0005BCC9 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770D8712ADE8B0A0005BCC9 /* ProfilePageViewController.swift */; };
 		A770D8742ADEA46B0005BCC9 /* CustomUISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770D8732ADEA46B0005BCC9 /* CustomUISegmentedControl.swift */; };
-		A770D8762ADFB5B00005BCC9 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A770D8752ADFB5AF0005BCC9 /* TabBar.swift */; };
 		A7987B5E2ADE66BF00434850 /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7987B5D2ADE66BF00434850 /* CustomUI.swift */; };
 		A7AD40742AD402F500953553 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A7AD40732AD402F500953553 /* SnapKit */; };
 		A7AD40762AD5D7A400953553 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD40752AD5D7A400953553 /* SignInViewController.swift */; };
@@ -47,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A71CC5382AE8F94E00725DF5 /* CustomUITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITabBar.swift; sourceTree = "<group>"; };
+		A71CC53A2AE8F97600725DF5 /* RoommatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoommatesViewController.swift; sourceTree = "<group>"; };
+		A71CC53C2AE8F99400725DF5 /* DialogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsViewController.swift; sourceTree = "<group>"; };
+		A71CC53E2AE8F9BE00725DF5 /* EventsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPageViewController.swift; sourceTree = "<group>"; };
+		A71CC5402AE8FB9700725DF5 /* CollectionViewProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewProfilePage.swift; sourceTree = "<group>"; };
 		A74F52DB2AC8049F001C9745 /* W2C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = W2C.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74F52DE2AC8049F001C9745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A74F52E02AC8049F001C9745 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +70,6 @@
 		A74F53012AC804A3001C9745 /* W2CUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W2CUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A770D8712ADE8B0A0005BCC9 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		A770D8732ADEA46B0005BCC9 /* CustomUISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUISegmentedControl.swift; sourceTree = "<group>"; };
-		A770D8752ADFB5AF0005BCC9 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		A7987B5D2ADE66BF00434850 /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
 		A7AD40752AD5D7A400953553 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A7AD40772AD6848B00953553 /* ApartmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentsViewController.swift; sourceTree = "<group>"; };
@@ -134,8 +142,12 @@
 				A7987B5D2ADE66BF00434850 /* CustomUI.swift */,
 				A770D8712ADE8B0A0005BCC9 /* ProfilePageViewController.swift */,
 				A770D8732ADEA46B0005BCC9 /* CustomUISegmentedControl.swift */,
-				A770D8752ADFB5AF0005BCC9 /* TabBar.swift */,
 				BF5BE21F2AE7084300133E29 /* UISection.swift */,
+				A71CC5382AE8F94E00725DF5 /* CustomUITabBar.swift */,
+				A71CC53A2AE8F97600725DF5 /* RoommatesViewController.swift */,
+				A71CC53C2AE8F99400725DF5 /* DialogsViewController.swift */,
+				A71CC53E2AE8F9BE00725DF5 /* EventsPageViewController.swift */,
+				A71CC5402AE8FB9700725DF5 /* CollectionViewProfilePage.swift */,
 			);
 			path = W2C;
 			sourceTree = "<group>";
@@ -305,10 +317,14 @@
 				A770D8742ADEA46B0005BCC9 /* CustomUISegmentedControl.swift in Sources */,
 				BF24F7B22ADD453300867986 /* inDetailSignUpViewController.swift in Sources */,
 				A74F52DF2AC8049F001C9745 /* AppDelegate.swift in Sources */,
-				A770D8762ADFB5B00005BCC9 /* TabBar.swift in Sources */,
 				BF5BE2202AE7084300133E29 /* UISection.swift in Sources */,
+				A71CC5392AE8F94E00725DF5 /* CustomUITabBar.swift in Sources */,
+				A71CC53D2AE8F99400725DF5 /* DialogsViewController.swift in Sources */,
 				A74F52E12AC8049F001C9745 /* SceneDelegate.swift in Sources */,
 				A7AD40782AD6848B00953553 /* ApartmentsViewController.swift in Sources */,
+				A71CC53B2AE8F97600725DF5 /* RoommatesViewController.swift in Sources */,
+				A71CC53F2AE8F9BE00725DF5 /* EventsPageViewController.swift in Sources */,
+				A71CC5412AE8FB9700725DF5 /* CollectionViewProfilePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

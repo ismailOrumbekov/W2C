@@ -3,7 +3,7 @@ import SnapKit
 
 class CustomCell: UICollectionViewCell {
     static let identifier = "myCell"
-    
+    static var textInfo = String()
     
     override var isSelected: Bool {
         didSet {
@@ -53,13 +53,15 @@ class CustomCell: UICollectionViewCell {
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .white
+        print(CustomCell.textInfo)
+        label.text = CustomCell.textInfo
         label.sizeToFit()
-        
+
         return label
     }()
     
     
-
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

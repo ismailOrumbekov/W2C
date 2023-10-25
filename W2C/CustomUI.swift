@@ -108,6 +108,27 @@ struct CustomUI{
         return stackView
     }
     
+    func createCollectionView() -> UICollectionView{
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.allowsMultipleSelection = true
+        collectionView.alwaysBounceVertical = true
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .white
+        collectionView.register(CustomCell.self, forCellWithReuseIdentifier: CustomCell.identifier)
+        return collectionView
+    }
+    
+    func createImageViewForProfile() -> UIImageView{
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor(named: "gray")
+        imageView.layer.cornerRadius = 10
+        return imageView
+    }
+    
     func getIcon(name: String) -> UIImageView{
         let imageView = UIImageView(image: UIImage(named: name))
         return imageView
