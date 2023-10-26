@@ -11,8 +11,9 @@ import SnapKit
 
 class ProfilePageViewController: UIViewController{
     
-    private let sizingCell = CustomCell()
+    let sizingCell = CustomCell()
     let customUI = CustomUI()
+    private var switchView = UIView()
     
     var titleList = ["О себе", "Соседи", "Плохие привычки", "Интересы"]
     var informationList = [
@@ -20,6 +21,11 @@ class ProfilePageViewController: UIViewController{
         "- Sungat Arapbay \n- Ismail Orumbekov \n- Beka Chauvbayev \n- Alzhan Zhakypov",
         "- Sungat Arapbay \n- Ismail Orumbekov \n- Beka Chauvbayev \n- Alzhan Zhakypov",
         "- Sungat Arapbay \n- Ismail Orumbekov \n- Beka Chauvbayev \n- Alzhan Zhakypov"
+    ]
+    var apartmentInfo = [
+        ["3", "ул. Абая, 32А", "3,5"],
+        ["3", "ул. Абая, 32А", "3,5"],
+        ["3", "ул. Абая, 32А", "3,5"],
     ]
     
     private lazy var stackView = customUI.createCosialMediaView()
@@ -32,11 +38,17 @@ class ProfilePageViewController: UIViewController{
     
     private lazy var informationCollectionView: UICollectionView = customUI.createCollectionView()
     
+    private lazy var listOfApartments: UITableView = customUI.createTableViewApartments()
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        informationCollectionView.delegate = self
+        informationCollectionView.dataSource = self
+        listOfApartments.delegate = self
+        listOfApartments.dataSource = self
         setUpUI()
     }
     
@@ -62,7 +74,10 @@ extension ProfilePageViewController{
         view.addSubview(ageLabel)
         view.addSubview(stackView)
         view.addSubview(segmentedControl)
-//        view.addSubview(informationCollectionView)
+        view.addSubview(listOfApartments)
+        view.addSubview(switchView)
+        switchView.addSubview(listOfApartments)
+        switchView.addSubview(informationCollectionView)
         
     }
     
@@ -95,11 +110,23 @@ extension ProfilePageViewController{
             make.height.equalTo(50)
         }
         
-        informationCollectionView.snp.makeConstraints { make in
+        switchView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(segmentedControl.snp.bottom).offset(20)
+            make.width.equalToSuperview()
+            make.height.equalToSuperview()
+        }
+        
+        listOfApartments.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.9)
-            make.height.equalToSuperview().multipliedBy(0.4)
+            make.height.equalToSuperview().multipliedBy(0.35)
+        }
+        
+        informationCollectionView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.9)
+            make.height.equalToSuperview().multipliedBy(0.35)
         }
         
     }
@@ -109,6 +136,30 @@ extension ProfilePageViewController{
 extension ProfilePageViewController: CustomSegmentedControlDelegate{
     func changeToIndex(index: Int) {
         print(index)
+        switch index {
+        case 0:
+            switchView.bringSubviewToFront(informationCollectionView)
+        case 2:
+            switchView.bringSubviewToFront(listOfApartments)
+        default:
+            break
+        }
+        
     }
 }
 
+extension ProfilePageViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return apartmentInfo.count
+     }
+         
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       let cell = tableView.dequeueReusableCell(withIdentifier: ApartmentCell.identifier, for: indexPath) as! ApartmentCell
+       cell.titleOfApartment.text = "\(apartmentInfo[indexPath.item][0])-х комнатная квартира"
+       cell.addressOfApartment.text = "Адрес: \(apartmentInfo[indexPath.item][1])"
+       cell.ratingOfApartment.text = "Рейтинг: \(apartmentInfo[indexPath.item][2])"
+         
+       return cell
+     }
+    
+}

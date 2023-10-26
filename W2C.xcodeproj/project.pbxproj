@@ -31,6 +31,7 @@
 		BF24F7B22ADD453300867986 /* inDetailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24F7B12ADD453300867986 /* inDetailSignUpViewController.swift */; };
 		BF5BE2202AE7084300133E29 /* UISection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5BE21F2AE7084300133E29 /* UISection.swift */; };
 		BF5BE2232AE7087200133E29 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF5BE2222AE7087200133E29 /* SnapKit */; };
+		BF5D7AAD2AE92C4700383F3B /* ApartmentCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5D7AAC2AE92C4700383F3B /* ApartmentCellTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		A7AD40792AD6855E00953553 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF24F7B12ADD453300867986 /* inDetailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inDetailSignUpViewController.swift; sourceTree = "<group>"; };
 		BF5BE21F2AE7084300133E29 /* UISection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISection.swift; sourceTree = "<group>"; };
+		BF5D7AAC2AE92C4700383F3B /* ApartmentCellTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentCellTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				A71CC53C2AE8F99400725DF5 /* DialogsViewController.swift */,
 				A71CC53E2AE8F9BE00725DF5 /* EventsPageViewController.swift */,
 				A71CC5402AE8FB9700725DF5 /* CollectionViewProfilePage.swift */,
+				BF5D7AAC2AE92C4700383F3B /* ApartmentCellTableView.swift */,
 			);
 			path = W2C;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				A7AD407A2AD6855E00953553 /* SignUpViewController.swift in Sources */,
 				A7AD40762AD5D7A400953553 /* SignInViewController.swift in Sources */,
+				BF5D7AAD2AE92C4700383F3B /* ApartmentCellTableView.swift in Sources */,
 				A7987B5E2ADE66BF00434850 /* CustomUI.swift in Sources */,
 				A74F52E32AC8049F001C9745 /* ViewController.swift in Sources */,
 				A770D8722ADE8B0A0005BCC9 /* ProfilePageViewController.swift in Sources */,

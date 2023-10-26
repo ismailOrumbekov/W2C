@@ -115,11 +115,18 @@ struct CustomUI{
         collectionView.showsVerticalScrollIndicator = false
         collectionView.allowsMultipleSelection = true
         collectionView.alwaysBounceVertical = true
-        collectionView.delegate = self
-        collectionView.dataSource = self
         collectionView.backgroundColor = .white
         collectionView.register(CustomCell.self, forCellWithReuseIdentifier: CustomCell.identifier)
         return collectionView
+    }
+    
+    func createTableViewApartments() -> UITableView{
+        let tableView = UITableView()
+        tableView.separatorColor = UIColor.clear
+        tableView.register(ApartmentCell.self, forCellReuseIdentifier: ApartmentCell.identifier)
+        tableView.allowsSelection = false
+        tableView.showsVerticalScrollIndicator = false
+        return tableView
     }
     
     func createImageViewForProfile() -> UIImageView{
