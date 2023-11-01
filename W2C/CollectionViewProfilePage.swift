@@ -16,8 +16,8 @@ extension ProfilePageViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCell.identifier, for: indexPath) as! CustomCell
-        cell.titleLabel.text = titleList[indexPath.item]
-        cell.informationLabel.text = informationList[indexPath.item]
+        cell.titleLabel.text = Variables.titleList[indexPath.item]
+        cell.informationLabel.text = Variables.informationList[indexPath.item]
         cell.informationLabel.sizeToFit()
         cell.layoutIfNeeded()
         
@@ -53,8 +53,8 @@ extension ProfilePageViewController: UICollectionViewDelegateFlowLayout {
         
         sizingCell.isSelected = isSelected
         sizingCell.setNeedsLayout()
-        sizingCell.titleLabel.text = titleList[indexPath.item]
-        sizingCell.informationLabel.text = informationList[indexPath.item]
+        sizingCell.titleLabel.text = Variables.titleList[indexPath.item]
+        sizingCell.informationLabel.text = Variables.informationList[indexPath.item]
         sizingCell.layoutIfNeeded()
 
         let size = sizingCell.systemLayoutSizeFitting(

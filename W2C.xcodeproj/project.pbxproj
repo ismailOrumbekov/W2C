@@ -12,6 +12,11 @@
 		A71CC53D2AE8F99400725DF5 /* DialogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC53C2AE8F99400725DF5 /* DialogsViewController.swift */; };
 		A71CC53F2AE8F9BE00725DF5 /* EventsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC53E2AE8F9BE00725DF5 /* EventsPageViewController.swift */; };
 		A71CC5412AE8FB9700725DF5 /* CollectionViewProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC5402AE8FB9700725DF5 /* CollectionViewProfilePage.swift */; };
+		A71CC5492AEA599E00725DF5 /* FeedbackTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC5482AEA599E00725DF5 /* FeedbackTableViewCells.swift */; };
+		A71CC54B2AEA59BF00725DF5 /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC54A2AEA59BF00725DF5 /* Objects.swift */; };
+		A71CC54D2AEA5A2B00725DF5 /* testVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC54C2AEA5A2B00725DF5 /* testVc.swift */; };
+		A71CC54F2AEA656B00725DF5 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC54E2AEA656B00725DF5 /* Delegates.swift */; };
+		A71CC5512AEBC7C600725DF5 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71CC5502AEBC7C600725DF5 /* Variables.swift */; };
 		A74F52DF2AC8049F001C9745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F52DE2AC8049F001C9745 /* AppDelegate.swift */; };
 		A74F52E12AC8049F001C9745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F52E02AC8049F001C9745 /* SceneDelegate.swift */; };
 		A74F52E32AC8049F001C9745 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F52E22AC8049F001C9745 /* ViewController.swift */; };
@@ -57,6 +62,11 @@
 		A71CC53C2AE8F99400725DF5 /* DialogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogsViewController.swift; sourceTree = "<group>"; };
 		A71CC53E2AE8F9BE00725DF5 /* EventsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPageViewController.swift; sourceTree = "<group>"; };
 		A71CC5402AE8FB9700725DF5 /* CollectionViewProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewProfilePage.swift; sourceTree = "<group>"; };
+		A71CC5482AEA599E00725DF5 /* FeedbackTableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTableViewCells.swift; sourceTree = "<group>"; };
+		A71CC54A2AEA59BF00725DF5 /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
+		A71CC54C2AEA5A2B00725DF5 /* testVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVc.swift; sourceTree = "<group>"; };
+		A71CC54E2AEA656B00725DF5 /* Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
+		A71CC5502AEBC7C600725DF5 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		A74F52DB2AC8049F001C9745 /* W2C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = W2C.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74F52DE2AC8049F001C9745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A74F52E02AC8049F001C9745 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +161,11 @@
 				A71CC53E2AE8F9BE00725DF5 /* EventsPageViewController.swift */,
 				A71CC5402AE8FB9700725DF5 /* CollectionViewProfilePage.swift */,
 				BF5D7AAC2AE92C4700383F3B /* ApartmentCellTableView.swift */,
+				A71CC5482AEA599E00725DF5 /* FeedbackTableViewCells.swift */,
+				A71CC54A2AEA59BF00725DF5 /* Objects.swift */,
+				A71CC54C2AEA5A2B00725DF5 /* testVc.swift */,
+				A71CC54E2AEA656B00725DF5 /* Delegates.swift */,
+				A71CC5502AEBC7C600725DF5 /* Variables.swift */,
 			);
 			path = W2C;
 			sourceTree = "<group>";
@@ -313,10 +328,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7AD407A2AD6855E00953553 /* SignUpViewController.swift in Sources */,
+				A71CC54B2AEA59BF00725DF5 /* Objects.swift in Sources */,
 				A7AD40762AD5D7A400953553 /* SignInViewController.swift in Sources */,
+				A71CC5492AEA599E00725DF5 /* FeedbackTableViewCells.swift in Sources */,
 				BF5D7AAD2AE92C4700383F3B /* ApartmentCellTableView.swift in Sources */,
 				A7987B5E2ADE66BF00434850 /* CustomUI.swift in Sources */,
 				A74F52E32AC8049F001C9745 /* ViewController.swift in Sources */,
+				A71CC5512AEBC7C600725DF5 /* Variables.swift in Sources */,
 				A770D8722ADE8B0A0005BCC9 /* ProfilePageViewController.swift in Sources */,
 				A770D8742ADEA46B0005BCC9 /* CustomUISegmentedControl.swift in Sources */,
 				BF24F7B22ADD453300867986 /* inDetailSignUpViewController.swift in Sources */,
@@ -326,6 +344,8 @@
 				A71CC53D2AE8F99400725DF5 /* DialogsViewController.swift in Sources */,
 				A74F52E12AC8049F001C9745 /* SceneDelegate.swift in Sources */,
 				A7AD40782AD6848B00953553 /* ApartmentsViewController.swift in Sources */,
+				A71CC54F2AEA656B00725DF5 /* Delegates.swift in Sources */,
+				A71CC54D2AEA5A2B00725DF5 /* testVc.swift in Sources */,
 				A71CC53B2AE8F97600725DF5 /* RoommatesViewController.swift in Sources */,
 				A71CC53F2AE8F9BE00725DF5 /* EventsPageViewController.swift in Sources */,
 				A71CC5412AE8FB9700725DF5 /* CollectionViewProfilePage.swift in Sources */,

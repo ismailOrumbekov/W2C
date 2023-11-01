@@ -122,7 +122,8 @@ struct CustomUI{
     
     func createTableViewApartments() -> UITableView{
         let tableView = UITableView()
-        tableView.separatorColor = UIColor.clear
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        tableView.separatorColor = .black
         tableView.register(ApartmentCell.self, forCellReuseIdentifier: ApartmentCell.identifier)
         tableView.allowsSelection = false
         tableView.showsVerticalScrollIndicator = false
@@ -134,6 +135,31 @@ struct CustomUI{
         imageView.backgroundColor = UIColor(named: "gray")
         imageView.layer.cornerRadius = 10
         return imageView
+    }
+    
+    
+    func createHaveCommentsLabel() -> UILabel{
+            let label = UILabel()
+             label.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight(0.3))
+             label.textColor = .white
+             return label
+        }
+        
+    func createDateLabel() -> UILabel{
+            let label = UILabel()
+            label.textColor = .white
+            label.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight(0.8))
+            return label
+        }
+    
+    func createTableViewForFeedbacks() -> UITableView{
+        let tableView = UITableView()
+         tableView.layer.cornerRadius = 15
+         tableView.backgroundColor = UIColor(named: "mainRed")
+         tableView.separatorColor = .white
+         tableView.register(MyTableViewCell.self, forCellReuseIdentifier: MyTableViewCell.identifier)
+         tableView.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+         return tableView
     }
     
     func getIcon(name: String) -> UIImageView{

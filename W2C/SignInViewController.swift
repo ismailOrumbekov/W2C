@@ -51,7 +51,7 @@ class SignInViewController: UIViewController{
     
     @objc func signInPressed(){
         
-        let apartmentPage = ProfilePageViewController()
+        let apartmentPage = MainTabBarController()
         self.navigationController?.pushViewController(apartmentPage, animated: true)
     }
 }

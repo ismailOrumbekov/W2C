@@ -109,4 +109,12 @@ extension ApartmentCell {
         }
     }
     
+    
+    func setColors(){
+        viewOfAparmentsInfo.backgroundColor = .white
+        titleOfApartment.textColor = .black
+        addressOfApartment.textColor = .black
+        ratingOfApartment.textColor = .black
+    }
+    
 }
